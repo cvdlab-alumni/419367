@@ -1,23 +1,13 @@
-//Esercizio3a,3b
-function upperword(s){
-return s.toUpperCase();
+//Esercizio3a
+function capitalize(word){
+	var c = word.charAt(0).toUpperCase();
+return c + word.slice(1);
 }
 
-//Esercizio3c
-var data = [
-  {id:'01', name:'duffy'},
-  {id:'02', name:'michey'},
-  {id:'03', name:'donald'},
-  {id:'04', name:'goofy'},
-  {id:'05', name:'minnie'},
-  {id:'06', name:'scrooge'}
-];
-var key = 'name';
-var values = ['goofy', 'scrooge'];
+//Esercizio3b
+function capitalize_testo(testo){
+	var words = testo.split(' ').map(capitalize);
+return words.join(' ');
+}
 
-
-var filterResult = data.filter(function(item, index, array){
-	return (item.name == values)});
-
-filterResult;
-
+capitalize_testo("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
