@@ -22,6 +22,6 @@ surf = MAP(surface)(domain)
 cofano = S([1,2,3])([0.33,0.33,0.33])(T([1,2,3])([-13,-11.5,-9.5])(COLOR(RED)(surf)))
 
 
-#2.5 MODEL
-model = STRUCT([T_xy_profile,S_T_xz_profile,S_T_yz_section,cofano])
+#2.5 FINAL MODEL
+model = STRUCT([T_xy_profile,S_T_xz_profile,S_T_yz_section,wheel_01,wheel_02,wheel_03,wheel_04,T_volante,cofano])
 VIEW(model)
