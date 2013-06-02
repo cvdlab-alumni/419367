@@ -173,7 +173,7 @@
   return model
   })();
 
-  exports.author = 'PUT_YOUR_GITHUB_USERNAME_HERE';
+  exports.author = 'federicopast';
   exports.category = 'vehicles';
   exports.scmodel = scmodel;
 
