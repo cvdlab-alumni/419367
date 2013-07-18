@@ -1,11 +1,11 @@
 //Domains
-var domainTorus = DOMAIN([[0,2*PI],[0,PI]])([70,5]);
-var domainTorus2 = DOMAIN([[-PI/2,PI/2],[0,PI]])([70,5]);
-var domainTorus3 = DOMAIN([[-PI/2,PI/2],[0,PI/2]])([70,2]);
-var domainRack = DOMAIN([[0,2*PI],[0,PI]])([70,70]);
+var domainTorus = DOMAIN([[0,2*PI],[0,PI]])([50,5]);
+var domainTorus2 = DOMAIN([[-PI/2,PI/2],[0,PI]])([50,5]);
+var domainTorus3 = DOMAIN([[-PI/2,PI/2],[0,PI/2]])([50,2]);
+var domainRack = DOMAIN([[0,2*PI],[0,PI]])([50,50]);
 var dom2D = DOMAIN([[0,1],[0,1]])([72,72]);
 var dom3D = DOMAIN([[0,1],[0,1],[0,1]])([30,30,1]);
-var domain3 = DOMAIN([[0,1],[0,2*PI]])([50,50]);
+var domain3 = DOMAIN([[0,1],[0,2*PI]])([10,10]);
 
 //Torus function
 var torus = function (R, r){
