@@ -1,13 +1,13 @@
 //Domains
-var domainTorus = DOMAIN([[0,2*PI],[0,PI]])([50,5]);
-var domainTorus2 = DOMAIN([[-PI/2,PI/2],[0,PI]])([50,5]);
-var domainTorus3 = DOMAIN([[-PI/2,PI/2],[0,PI/2]])([50,2]);
-var domainRack = DOMAIN([[0,2*PI],[0,PI]])([50,50]);
+var domainTorus = DOMAIN([[0,2*PI],[0,PI]])([70,5]);
+var domainTorus2 = DOMAIN([[-PI/2,PI/2],[0,PI]])([70,5]);
+var domainTorus3 = DOMAIN([[-PI/2,PI/2],[0,PI/2]])([70,2]);
+var domainRack = DOMAIN([[0,2*PI],[0,PI]])([70,70]);
 var dom2D = DOMAIN([[0,1],[0,1]])([72,72]);
-var dom3D = DOMAIN([[0,1],[0,1],[0,1]])([10,10,1]);
-var domain3 = DOMAIN([[0,1],[0,2*PI]])([20,20]);
+var dom3D = DOMAIN([[0,1],[0,1],[0,1]])([30,30,1]);
+var domain3 = DOMAIN([[0,1],[0,2*PI]])([50,50]);
 
-//Function torus
+//Torus function
 var torus = function (R, r){
 	return mapping = function (v) {
 		var a = v[0]
@@ -83,7 +83,7 @@ var map_scF = T([0,1,2])([2.53,-1.917,-3.01])(R([1,2])(PI/2)(R([0,1])(-PI/2)(R([
 var bottom_pillow = T([1,2])([-0.8,0.35])(STRUCT([map_scF,map_scR,map_scL,surf_bottom,outer_pillow1,outer_pillow_corner1,outer_pillow_corner2]));
 var pillows = COLOR([0.803,0,0])(STRUCT([bottom_pillow,pillow1,pillow2]));
 
-//Chair Rack
+//Chair Frame
 var r1 = T([1,2])([-0.5,-6])(MAP(torus(2.36,0.13))(domainRack));
 var pr_0 = [[0,0,-1.5],[0,0.208,-1.5],[0.3328,0.208,-1.5],[0.3328,0,-1.5],[0.3328,-0.208,-1.5],[0,-0.208,-1.5],[0,0,-1.5]];
 var pr_1 = [[0,0,0],[0,0.208,0],[0.3328,0.208,0.3328],[0.3328,0,0.3328],[0.3328,-0.208,0.3328],[0,-0.208,0],[0,0,0]];
@@ -120,8 +120,8 @@ var rot_surface1 = T([0,1,2])([2.36,-2.17,-6.41])(rot_surface);
 var rot_surface2 = S([0])([-1])(rot_surface1);
 var rot_surface3 = T([0,1,2])([0,1.637,-6.41])(rot_surface);
 
-var chair_rack = COLOR([0.882,0.929,0.811])(STRUCT([rack1,rack2,rack_link1,rack_link2,link3_1,link3_2,rot_surface1,rot_surface2,rot_surface3]));
+var chair_frame = COLOR([0.882,0.929,0.811])(STRUCT([rack1,rack2,rack_link1,rack_link2,link3_1,link3_2,rot_surface1,rot_surface2,rot_surface3]));
 
 //ArmChair
-var armChair = STRUCT([pillows,chair_rack]);
-DRAW(armChair);
+var Chair = STRUCT([pillows,chair_frame]);
+DRAW(Chair);
