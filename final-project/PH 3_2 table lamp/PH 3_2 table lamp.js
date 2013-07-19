@@ -108,10 +108,10 @@ var bulb = COLOR([1,1,1])(T([2])([2])(R([0,2])(PI)(S([0,1,2])([0.4,0.4,0.5])(MAP
 var lightBulb = T([2])([-0.3])(STRUCT([bulb_socket,bulb]));
 
 //Pillars
-var pillar1 = T([0,2])([-2.5,0.6])(R([0,2])(PI/2)(CYL_SURFACE([0.05,5])([50,1])));
-var pillar2 = T([0,2])([-1.7,-6.8])(CYL_SURFACE([0.05,7.4])([50,1]));
-var pillar3 = T([0,2])([1.7,-6.8])(CYL_SURFACE([0.05,7.4])([50,1]));
-var pillar4 = T([0,2])([-3.3,-4])(R([0,2])(PI/2)(CYL_SURFACE([0.05,6.6])([50,1])));
+var pillar1 = T([0,2])([-2.5,0.6])(R([0,2])(PI/2)(CYL_SURFACE([0.1,5])([50,1])));
+var pillar2 = T([0,2])([-1.7,-6.8])(CYL_SURFACE([0.1,7.4])([50,1]));
+var pillar3 = T([0,2])([1.7,-6.8])(CYL_SURFACE([0.1,7.4])([50,1]));
+var pillar4 = T([0,2])([-3.3,-4])(R([0,2])(PI/2)(CYL_SURFACE([0.1,6.6])([50,1])));
 var pillars = COLOR([1,0.843,0])(STRUCT([pillar1,pillar2,pillar3,pillar4]));
 
 //Lamp
